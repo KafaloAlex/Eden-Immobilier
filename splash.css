@@ -20,24 +20,29 @@ body{
 }
 
 .logo{
-    width: 500px;
-    height: 90px;
+    width: 600px;
+    height: 10px;
     margin: 150px auto 50px auto;
-    font-size: 50px;
+    font-size: 100px;
     text-shadow: -1px 2px 2px #000;
     text-decoration: center;
     color: azure;
 }
+  
+.logo .word {
+    display: inline-block;
+    line-height: 1em;
+  }
 
 .loader-frame{
-    width: 70px;
-    height: 70px;
-    margin: auto;
-    margin-top: 35px;
+    width: 90px;
+    height: 90px;
+    margin:auto;
     position: relative;
+    top: 160px;
 }
 
-.loader1,.loader2{
+.loader1,.loader{
     position: absolute;
     border: 5px solid transparent;
     border-radius: 50%;
@@ -49,13 +54,18 @@ body{
     border-top: 5px solid azure;
     border-bottom: 5px solid azure;
     animation: anim1 2s linear 3;
+    text-align: center;
 }
 
 .loader2{
-    width: 40px;
-    height: 40px;
-    border-top: 5px solid #1763e9;
-    border-bottom: 5px solid #1763e9;
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+    border-radius: 100%;
+    border-top: 1.5px solid #a6bfe9;
+    border-bottom: 1.5px solid #a6bfe9;
+    box-shadow: black;
+    background-color: #1763e9;
     top: 5px;
     left: 5px;
     animation: anim2 2s linear 3;
