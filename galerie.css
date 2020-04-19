@@ -10,16 +10,24 @@ body {
 .container.gallery-container {
     background-color: #fff;
     color: #35373a;
-    min-height: 100vh;
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
 }
 
 .gallery-container h1 {
+    overflow: hidden;
     text-align: center;
     margin-top: 70px;
+    width: auto;
     font-family: 'Droid Sans', sans-serif;
     font-weight: bold;
+    border-right: transparent; 
+    white-space: nowrap; 
+    letter-spacing: .10em; 
+    animation: 
+      typing 3.5s steps(20, end),
+      blink-caret .75s step-end infinite;
 }
 
 .gallery-container p.page-description {
@@ -66,3 +74,15 @@ body {
         border-radius: 0;
     }
 }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(28, 59, 160); }
+  }
