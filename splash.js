@@ -1,6 +1,18 @@
-const splash = document.querySelector('.splash');
-document.addEventListener('DOMContentLoaded',(e)=>{
-    setTimeout(()=>{
-        splash.classList.add('display-none');
-    },4000);
-});
+(function(){
+    var preload = document.getElementById("preload");
+    var loading = 0;
+    var id = setInterval(frame, 64);
+
+    function frame(){
+        if(loading == 90){
+            clearInterval(id);
+            window.open("welcome.html", "_self");
+        }
+        else{
+            loading = loading + 1;
+            if(loading == 80){
+                preload.style.animation = "fadeout 1s ease";
+            }
+        }
+    }
+})();

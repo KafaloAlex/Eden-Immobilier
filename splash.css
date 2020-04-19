@@ -5,22 +5,23 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: fantasy;
+    font-family: Martel,Times New Roman,Times,serif;
 }
 
 .preload{
     width: 100%;
     height: 100%;
-    background-color: rgb(194, 182, 182);
+    background-color: rgba(180, 180, 180, 0.671);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+    text-align: center;
 }
 
 .logo{
-    width: 300px;
-    height: 70px;
+    width: 500px;
+    height: 90px;
     margin: 150px auto 50px auto;
     font-size: 50px;
     text-shadow: -1px 2px 2px #000;
@@ -32,9 +33,45 @@ body{
     width: 70px;
     height: 70px;
     margin: auto;
+    margin-top: 35px;
     position: relative;
 }
 
-.loader1,.loader{
+.loader1,.loader2{
     position: absolute;
+    border: 5px solid transparent;
+    border-radius: 50%;
+}
+
+.loader1{
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid azure;
+    border-bottom: 5px solid azure;
+    animation: anim1 2s linear 3;
+}
+
+.loader2{
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid #1763e9;
+    border-bottom: 5px solid #1763e9;
+    top: 5px;
+    left: 5px;
+    animation: anim2 2s linear 3;
+}
+
+@keyframes anim1{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg)}
+}
+
+@keyframes anim2{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(-360deg)}
+}
+
+@keyframes fadeout{
+    from{opacity: 1;}
+    to{opacity: 0;}
 }
